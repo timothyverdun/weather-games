@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Paris",
+    "country": "France",
+    "lat": 48.86,
+    "long": 2.35
+  },
+  {
+    "name": "Tokyo",
+    "country": "Japan",
+    "lat": 35.7,
+    "long": 139.6875
+  },
+  {
+    "name": "New York",
+    "country": "United States",
+    "lat": 40.71,
+    "long": -74.01
+  },
+  {
+    "name": "London",
+    "country": "United Kingdom",
+    "lat": 51.5,
+    "long": -0.12
+  },
+  {
+    "name": "Sydney",
+    "country": "Australia",
+    "lat": -33.87,
+    "long": 151.21
+  },
+  {
+    "name": "Cairo",
+    "country": "Egypt",
+    "lat": 30.06,
+    "long": 31.25
+  },
+  {
+    "name": "São Paulo",
+    "country": "Brazil",
+    "lat": -23.55,
+    "long": -46.63
+  },
+  {
+    "name": "Montreal",
+    "country": "Canada",
+    "lat": 45.51,
+    "long": -73.59
+  },
+  {
+    "name": "Mumbai",
+    "country": "India",
+    "lat": 19.07,
+    "long": 72.88
+  },
+  {
+    "name": "Cape Town",
+    "country": "South Africa",
+    "lat": -33.93,
+    "long": 18.42
+  }
+]
