@@ -8,16 +8,25 @@
     <link rel="icon" href="">
 </head>
 <body>
+    <header><a href="index.html"><- back to homepage</a></header>
     <main>
         <h1>Guess the city</h1>
+        <p>based on the current weather, choose which city corresponds to it.</p>
 
-        <p id="temperature"></p>
-        <p id="humidity"></p>
+        <p>Temperature <span id="temperature"></span>°C</p>
+        <p>Is day ? <span id="isday"></span></p>
+        <p>Precipations <span id="precipitation"></span></p>
+        <p>Humidity <span id="humidity"></span>%</p>
+        <p>Wind speed <span id="windspeed"></span>km/h</p>
+        <p>Wind direction <span id="winddirection"></span></p>
         <div id="anwsersBox"></div>
     </main>
 <style>
-    .disabled-button {
-        opacity: 0.5;
+    .false-button {
+        background-color: red;
+    }
+    .true-button {
+        background-color: green;
     }
 </style>
     <script src="scripts/cityguess.js"></script>

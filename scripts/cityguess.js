@@ -4,7 +4,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-//Chosir 4 villes au hasard dont une bonne réponse 
+//Choisir 4 villes au hasard dont une bonne réponse 
 
 fetch("citydata.json")
     .then((response) => {
@@ -42,8 +42,12 @@ fetch("citydata.json")
                 data = response.current
                 console.log(data);
 
-                document.getElementById("humidity").innerHTML = data.relative_humidity_2m
                 document.getElementById("temperature").innerHTML = data.temperature_2m
+                document.getElementById("isday").innerHTML = data.is_day
+                document.getElementById("precipitation").innerHTML = data.precipitation
+                document.getElementById("humidity").innerHTML = data.relative_humidity_2m
+                document.getElementById("windspeed").innerHTML = data.wind_speed_10m
+                document.getElementById("winddirection").innerHTML = data.wind_direction_10m
             })
             .catch((error) => {
                 console.error(error);
@@ -58,7 +62,7 @@ fetch("citydata.json")
             newButton.addEventListener('click', (event) => {
                 checkAnwser(event.currentTarget);
             })
-            newButton.innerHTML = city.name + " (" + city.country + ")"
+            newButton.innerHTML = '<span>' + city.name + '</span>' + " (" + city.country + ")"
             anwsersBox.appendChild(newButton)
         })
 
@@ -66,12 +70,15 @@ fetch("citydata.json")
         let allButtons = anwsersBox.querySelectorAll('button')
         function checkAnwser(element) {
             if (isanwser == false) {
-                if (element.innerHTML == choosedcity.name) {
-                    element.style.color = 'green'
+                if (element.querySelector('span').innerHTML == choosedcity.name) {
+                    element.classList.add('true-button')
                 } else {
-                    element.style.color = 'red'
+                    allButtons.forEach((e) => {
+                        if (e.querySelector('span').innerHTML == choosedcity.name) {
+                            e.classList.add('true-button')
+                        } element.classList.add('false-button')
+                    })
                 }
-                allButtons.not(element).forEach((e) => { e.classList.add('disabled-button') })
                 isanwser = true
             }
         }
