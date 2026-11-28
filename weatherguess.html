@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Guess | Weather Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header><a href="index.html"><- back to homepage</a></header>
+    <main>
+        <h1>Guess the weather</h1>
+
+        <p id="city"></p>
+        <form id="guess-form">
+            <label for="temperature">Température :</label>
+            <input type="range" name="temperature" id="temperature" list="markers" min="-40" max="40" step="0.1">
+
+            <datalist id="markers">
+                <option value="-40"></option>
+                <option value="-20"></option>
+                <option value="0"></option>
+                <option value="20"></option>
+                <option value="40"></option>
+            </datalist>
+
+            <p><output id="value"></output> °C</p>
+
+            <button type="submit" id="submit">Valider</button>
+        </form>
+
+        <p id="result"></p>
+    </main>
+    <script src="scripts/weatherguess.js"></script>
+</body>
+
+</html>
